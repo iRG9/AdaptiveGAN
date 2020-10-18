@@ -4,7 +4,7 @@ import torch.nn
 
 class Loss:
     def __init__(self):
-        self.criterion = torch.nn.CrossEntropy()
+        self.criterion = torch.nn.BCELoss()
 
     def disc_loss(self, real, gen):
         return self.criterion(real, torch.ones_like(real)) + self.criterion(gen, torch.zeros_like(gen))

@@ -1,11 +1,11 @@
 import torchvision.transforms as transforms
-import numpy as np
 import random
 
 
 class RandomAugment:
     def __init__(self):
         self.p = 0
+
     # Creating Set of Transforms
     def apply_transforms(self, inp):
         inp = transforms.ToPILImage()(inp)
